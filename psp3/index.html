@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="PSP3000刷机图片资源分享与详细图文教程指南，提供官方系统恢复、CFW自制系统安装及常见问题解答。">
+    <meta name="keywords" content="psp3000刷机图片, PSP3000刷机教程, PSP3000自制系统, PSP3000固件下载, PSP3000双系统">
+    <title>PSP3000刷机图片-PSP3000自制系统安装与图文教程</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #3498db;
+            --bg-color: #f5f7fa;
+            --card-bg: #ffffff;
+            --text-main: #333333;
+            --text-secondary: #666666;
+            --border-radius: 8px;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            --spacing-unit: 1rem;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        /* 布局容器 */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        /* 头部导航 */
+        header {
+            background-color: var(--card-bg);
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 60px;
+        }
+
+        .logo {
+            font-size: 1.25rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent-color);
+        }
+
+        /* Hero 区域 */
+        .hero {
+            background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
+            color: white;
+            padding: 3rem 0;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .hero h1 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* 主要内容区 */
+        main {
+            padding-bottom: 3rem;
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            border-left: 4px solid var(--accent-color);
+            padding-left: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        /* 教程步骤卡片 */
+        .steps-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .step-card {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            overflow: hidden;
+            transition: transform 0.2s;
+        }
+
+        .step-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .step-image {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            background-color: #eee;
+        }
+
+        .step-content {
+            padding: 1.5rem;
+        }
+
+        .step-number {
+            background-color: var(--accent-color);
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .step-title {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        .step-desc {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        /* 大图展示区 */
+        .gallery-section {
+            margin-bottom: 3rem;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 15px;
+        }
+
+        .gallery-item {
+            position: relative;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            aspect-ratio: 4/3;
+            cursor: pointer;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .gallery-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.6);
+            color: white;
+            padding: 8px;
+            font-size: 0.85rem;
+            text-align: center;
+        }
+
+        /* 下载与资源区 */
+        .resources-section {
+            background-color: var(--card-bg);
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            margin-bottom: 3rem;
+        }
+
+        .resource-list {
+            list-style: none;
+        }
+
+        .resource-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .resource-item:last-child {
+            border-bottom: none;
+        }
+
+        .resource-info h4 {
+            font-size: 1rem;
+            margin-bottom: 4px;
+        }
+
+        .resource-info span {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            background: #eee;
+            padding: 2px 6px;
+            border-radius: 4px;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: white;
+            text-decoration: none;
+            padding: 8px 16px;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            transition: background-color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #2980b9;
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            border: 1px solid var(--accent-color);
+            color: var(--accent-color);
+        }
+
+        .btn-outline:hover {
+            background-color: var(--accent-color);
+            color: white;
+        }
+
+        /* 常见问题 */
+        .faq-section {
+            margin-bottom: 3rem;
+        }
+
+        .faq-item {
+            background: var(--card-bg);
+            margin-bottom: 10px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            overflow: hidden;
+        }
+
+        .faq-question {
+            padding: 1.2rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 500;
+        }
+
+        .faq-answer {
+            padding: 0 1.2rem 1.2rem 1.2rem;
+            color: var(--text-secondary);
+            display: none;
+            border-top: 1px solid #f0f0f0;
+            padding-top: 1rem;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        .faq-icon {
+            font-size: 1.2rem;
+            transition: transform 0.3s;
+        }
+
+        .faq-item.active .faq-icon {
+            transform: rotate(180deg);
+        }
+
+        /* 页脚 */
+        footer {
+            background-color: var(--primary-color);
+            color: #bdc3c7;
+            padding: 2rem 0;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        /* 响应式调整 */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            .hero h1 {
+                font-size: 1.5rem;
+            }
+            .section-title {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="container nav-wrapper">
+        <a href="#" class="logo">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="20" height="12" rx="2"/><path d="M6 12h4"/><path d="M8 10v4"/></svg>
+            PSP3000 刷机之家
+        </a>
+        <nav class="nav-links">
+            <a href="#guide">图文教程</a>
+            <a href="#gallery">刷机图片</a>
+            <a href="#resources">资源下载</a>
+            <a href="#faq">常见问题</a>
+        </nav>
+    </div>
+</header>
+
+<section class="hero">
+    <div class="container">
+        <h1>PSP3000 刷机图片与系统恢复指南</h1>
+        <p>探索 PSP3000 刷机图片资源，获取详细的屏幕状态指示图示、操作界面截图及自制系统安装流程，助您安全恢复机器功能。</p>
+    </div>
+</section>
+
+<main class="container">
+    
+    <!-- 教程区域 -->
+    <section id="guide">
+        <div class="section-title">
+            <span>核心刷机步骤与图片说明</span>
+            <a href="#" class="btn btn-outline">查看完整PDF版</a>
+        </div>
+        
+        <div class="steps-grid">
+            <!-- 步骤 1 -->
+            <article class="step-card">
+                <img src="https://picsum.photos/seed/psp1/400/250" alt="PSP3000 进入恢复模式界面截图" class="step-image">
+                <div class="step-content">
+                    <div class="step-number">1</div>
+                    <h3 class="step-title">进入恢复模式</h3>
+                    <p class="step-desc">按住 R 键开机，进入 PSP 恢复模式。此界面是刷机前的准备工作，请确保电池电量充足。</p>
+                </div>
+            </article>
+
+            <!-- 步骤 2 -->
+            <article class="step-card">
+                <img src="https://picsum.photos/seed/psp2/400/250" alt="PSP3000 刷机文件传输界面" class="step-image">
+                <div class="step-content">
+                    <div class="step-number">2</div>
+                    <h3 class="step-title">挂载 UMD 驱动</h3>
+                    <p class="step-desc">在恢复模式下选择 "Mount UMD Drive: No" -> "UMD DISC Mode" -> "UMD No Disc"。这是刷机成功的关键步骤。</p>
+                </div>
+            </article>
+
+            <!-- 步骤 3 -->
+            <article class="step-card">
+                <img src="https://picsum.photos/seed/psp3/400/250" alt="PSP3000 CFW 自制系统开机画面" class="step-image">
+                <div class="step-content">
+                    <div class="step-number">3</div>
+                    <h3 class="step-title">安装自制系统 (CFW)</h3>
+                    <p class="step-desc">通过 USB 连接电脑，将刷机文件拷贝至 PSP 根目录。重启后，屏幕将显示自定义的开机画面，表示刷机成功。</p>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- 图片画廊 -->
+    <section id="gallery" class="gallery-section">
+        <div class="section-title">PSP3000 刷机过程关键图片</div>
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <img src="https://picsum.photos/seed/pspg1/400/300" alt="PSP3000 恢复模式菜单选项">
+                <div class="gallery-caption">恢复模式主菜单</div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://picsum.photos/seed/pspg2/400/300" alt="PSP3000 处理器状态图示">
+                <div class="gallery-caption">处理器状态指示灯</div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://picsum.photos/seed/pspg3/400/300" alt="PSP3000 恢复模式操作指南">
+                <div class="gallery-caption">操作指南参考图</div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://picsum.photos/seed/pspg4/400/300" alt="PSP3000 刷机后界面">
+                <div class="gallery-caption">自制系统开机画面</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 资源下载 -->
+    <section id="resources" class="resources-section">
+        <div class="section-title">常用刷机资源包</div>
+        <ul class="resource-list">
+            <li class="resource-item">
+                <div class="resource-info">
+                    <h4>5.50 GEN-D2 (PSP3000通用版)</h4>
+                    <span>版本: v1.1</span>
+                </div>
+                <a href="#" class="btn btn-outline">下载</a>
+            </li>
+            <li class="resource-item">
+                <div class="resource-info">
+                    <h4>PSP3000 刷机图文手册 (PDF)</h4>
+                    <span>类型: 文档</span>
+                </div>
+                <a href="#" class="btn btn-outline">下载</a>
+            </li>
+            <li class="resource-item">
+                <div class="resource-info">
+                    <h4>恢复模式操作对照表</h4>
+                    <span>类型: 图片</span>
+                </div>
+                <a href="#" class="btn btn-outline">下载</a>
+            </li>
+        </ul>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="faq-section">
+        <div class="section-title">刷机常见问题 (FAQ)</div>
+        
+        <div class="faq-item">
+            <div class="faq-question">
+                刷机会导致 PSP3000 无法开机吗？
+                <span class="faq-icon">▼</span>
+            </div>
+            <div class="faq-answer">
+                如果操作正确，刷机会安装自制系统，但不会导致无法开机。如果刷机后无法开机，通常是电池电量不足或文件拷贝错误。请确保电量在 50% 以上，并重新检查文件结构。
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+                如何判断刷机成功？
+                <span class="faq-icon">▼</span>
+            </div>
+            <div class="faq-answer">
+                成功刷机后，PSP 开机时会显示自定义的彩色开机画面，且在 XMB 主界面可以看到 "Settings" 菜单中增加了 "Recovery Menu" 选项。
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+                刷机图片在哪里找？
+                <span class="faq-icon">▼</span>
+            </div>
+            <div class="faq-answer">
+                本站提供了详细的刷机步骤图示和关键界面截图。建议先阅读本页的“核心刷机步骤”部分，配合图片进行操作。
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    <div class="container">
+        <p>&copy; 2023 PSP3000 刷机之家. 仅供技术交流与学习使用。</p>
+        <p style="margin-top: 10px; font-size: 0.8rem; color: #7f8c8d;">
+            注意：刷机有风险，操作需谨慎。请确保对机器进行数据备份。
+        </p>
+    </div>
+</footer>
+
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+<script>
+    // FAQ 交互逻辑
+    document.addEventListener('DOMContentLoaded', function() {
+        const faqItems = document.querySelectorAll('.faq-item');
+        
+        faqItems.forEach(item => {
+            const question = item.querySelector('.faq-question');
+            question.addEventListener('click', () => {
+                const isActive = item.classList.contains('active');
+                
+                // 关闭所有其他项
+                faqItems.forEach(i => i.classList.remove('active'));
+                
+                // 如果之前没有激活，则激活当前项
+                if (!isActive) {
+                    item.classList.add('active');
+                }
+            });
+        });
+    });
+</script>
+
+</body>
+</html>
