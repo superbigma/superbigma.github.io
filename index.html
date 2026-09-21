@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="番石榴的图片大全 - 提供高清番石榴果实特写、新鲜水果摄影图及营养知识科普，满足您查找优质番石榴素材的需求。">
+    <meta name="keywords" content="番石榴的图片,番石榴,番石榴图片,番石榴摄影,番石榴高清图">
+    <title>番石榴的图片-高清果实特写与营养科普图库</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #4CAF50;
+            --primary-dark: #388E3C;
+            --accent-color: #FFC107;
+            --text-main: #333333;
+            --text-secondary: #666666;
+            --bg-body: #f9f9f9;
+            --bg-card: #ffffff;
+            --spacing-unit: 16px;
+            --border-radius: 8px;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            background-color: var(--bg-body);
+            color: var(--text-main);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Layout */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        /* Header */
+        header {
+            background-color: var(--bg-card);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 64px;
+        }
+
+        .logo {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--primary-dark);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo-icon {
+            width: 32px;
+            height: 32px;
+            background-color: var(--primary-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 18px;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 24px;
+        }
+
+        nav a {
+            font-size: 0.95rem;
+            color: var(--text-main);
+            font-weight: 500;
+            transition: var(--transition);
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--primary-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #e8f5e9 0%, #ffffff 100%);
+            padding: 60px 0;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            color: var(--primary-dark);
+            margin-bottom: 16px;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* Filter Bar */
+        .filter-bar {
+            background: var(--bg-card);
+            padding: 20px;
+            border-radius: var(--border-radius);
+            margin-bottom: 30px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            align-items: center;
+            box-shadow: var(--shadow);
+        }
+
+        .filter-label {
+            font-weight: 600;
+            margin-right: 8px;
+        }
+
+        .filter-btn {
+            padding: 8px 16px;
+            border: 1px solid #ddd;
+            background: white;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            transition: var(--transition);
+        }
+
+        .filter-btn:hover, .filter-btn.active {
+            background-color: var(--primary-color);
+            color: white;
+            border-color: var(--primary-color);
+        }
+
+        /* Gallery Grid */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 24px;
+            margin-bottom: 60px;
+        }
+
+        .image-card {
+            background: var(--bg-card);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            position: relative;
+            group: card;
+        }
+
+        .image-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+        }
+
+        .image-wrapper {
+            position: relative;
+            padding-top: 100%; /* 1:1 Aspect Ratio */
+            overflow: hidden;
+            background-color: #eee;
+        }
+
+        .image-wrapper img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .image-card:hover .image-wrapper img {
+            transform: scale(1.05);
+        }
+
+        .card-content {
+            padding: 16px;
+        }
+
+        .card-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: var(--text-main);
+        }
+
+        .card-desc {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        .card-meta {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 12px;
+            font-size: 0.85rem;
+            color: #999;
+        }
+
+        /* Nutrition Section */
+        .nutrition-section {
+            background-color: white;
+            padding: 60px 0;
+            margin-top: 40px;
+            border-top: 1px solid #eee;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .section-header h2 {
+            font-size: 2rem;
+            color: var(--text-main);
+            margin-bottom: 12px;
+        }
+
+        .section-header p {
+            color: var(--text-secondary);
+        }
+
+        .nutrition-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .nutrition-item {
+            text-align: center;
+            padding: 30px;
+            background: #f9f9f9;
+            border-radius: var(--border-radius);
+            transition: var(--transition);
+        }
+
+        .nutrition-item:hover {
+            background: #f1f8e9;
+        }
+
+        .nutrition-icon {
+            font-size: 3rem;
+            margin-bottom: 16px;
+            display: block;
+        }
+
+        .nutrition-item h3 {
+            margin-bottom: 10px;
+            color: var(--primary-dark);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: #ccc;
+            padding: 40px 0;
+            margin-top: 60px;
+            font-size: 0.9rem;
+        }
+
+        .footer-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .footer-col {
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .footer-col h4 {
+            color: white;
+            margin-bottom: 16px;
+            font-size: 1rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 8px;
+        }
+
+        .footer-col ul li a:hover {
+            color: white;
+        }
+
+        .copyright {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #444;
+            font-size: 0.85rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-wrapper {
+                height: auto;
+                flex-direction: column;
+                padding: 16px 0;
+                gap: 16px;
+            }
+            
+            nav ul {
+                gap: 16px;
+                font-size: 0.9rem;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .gallery-grid {
+                grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-wrapper">
+            <a href="#" class="logo">
+                <span class="logo-icon">P</span>
+                番石榴图库
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">全部图片</a></li>
+                    <li><a href="#fresh">鲜果特写</a></li>
+                    <li><a href="#nutrition">营养科普</a></li>
+                    <li><a href="#usage">食用场景</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <h1>探索番石榴的图片之美</h1>
+                <p>提供高清、专业的番石榴摄影素材，涵盖鲜果特写、切片展示及营养科普图解，助您更好地了解和欣赏这一热带佳果。</p>
+            </div>
+        </section>
+
+        <div class="container">
+            <!-- Filter Bar -->
+            <div class="filter-bar">
+                <span class="filter-label">筛选分类：</span>
+                <button class="filter-btn active">全部</button>
+                <button class="filter-btn">鲜果特写</button>
+                <button class="filter-btn">切片展示</button>
+                <button class="filter-btn">植物生长</button>
+                <button class="filter-btn">营养知识</button>
+            </div>
+
+            <!-- Gallery Grid -->
+            <section class="gallery-grid" id="fresh">
+                <article class="image-card">
+                    <div class="image-wrapper">
+                        <img src="https://picsum.photos/seed/guava1/400/400" alt="饱满的番石榴鲜果特写">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">饱满鲜果特写</h3>
+                        <p class="card-desc">展示成熟番石榴圆润饱满的外形与表皮质感。</p>
+                        <div class="card-meta">
+                            <span>新鲜度: ★★★★★</span>
+                            <span>尺寸: 400x400</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="image-card">
+                    <div class="image-wrapper">
+                        <img src="https://picsum.photos/seed/guava2/400/400" alt="番石榴横截面">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">横截面展示</h3>
+                        <p class="card-desc">清晰的番石榴横切面，可见细密籽粒与果肉。</p>
+                        <div class="card-meta">
+                            <span>细节: 丰富</span>
+                            <span>用途: 食材展示</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="image-card">
+                    <div class="image-wrapper">
+                        <img src="https://picsum.photos/seed/guava3/400/400" alt="番石榴切片拼盘">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">水果拼盘</h3>
+                        <p class="card-desc">番石榴与其他热带水果搭配的创意摆盘。</p>
+                        <div class="card-meta">
+                            <span>风格: 清新</span>
+                            <span>场景: 餐桌</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="image-card">
+                    <div class="image-wrapper">
+                        <img src="https://picsum.photos/seed/guava4/400/400" alt="番石榴植物叶片">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">植物叶片</h3>
+                        <p class="card-desc">番石榴树特有的椭圆形叶片与果实同框。</p>
+                        <div class="card-meta">
+                            <span>自然: 纯净</span>
+                            <span>来源: 自然生长</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="image-card">
+                    <div class="image-wrapper">
+                        <img src="https://picsum.photos/seed/guava5/400/400" alt="番石榴榨汁过程">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">鲜榨果汁</h3>
+                        <p class="card-desc">番石榴鲜果被压榨后呈现的翠绿色果汁。</p>
+                        <div class="card-meta">
+                            <span>状态: 新鲜</span>
+                            <span>场景: 饮品制作</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="image-card">
+                    <div class="image-wrapper">
+                        <img src="https://picsum.photos/seed/guava6/400/400" alt="番石榴果实细节">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">表皮纹理</h3>
+                        <p class="card-desc">放大拍摄番石榴表皮的细微纹理与斑点。</p>
+                        <div class="card-meta">
+                            <span>焦点: 纹理</span>
+                            <span>技术: 微距</span>
+                        </div>
+                    </div>
+                </article>
+            </section>
+
+            <!-- Nutrition Section -->
+            <section class="nutrition-section" id="nutrition">
+                <div class="container">
+                    <div class="section-header">
+                        <h2>番石榴的营养价值</h2>
+                        <p>了解吃番石榴的好处，科学搭配饮食</p>
+                    </div>
+                    <div class="nutrition-grid">
+                        <div class="nutrition-item">
+                            <span class="nutrition-icon">🥗</span>
+                            <h3>富含维生素C</h3>
+                            <p>番石榴的维生素C含量远高于柑橘和猕猴桃，有助于增强免疫力和促进胶原蛋白合成。</p>
+                        </div>
+                        <div class="nutrition-item">
+                            <span class="nutrition-icon">🍎</span>
+                            <h3>膳食纤维丰富</h3>
+                            <p>果肉中包含大量纤维，有助于促进肠道蠕动，缓解便秘，同时增加饱腹感，适合控制体重。</p>
+                        </div>
+                        <div class="nutrition-item">
+                            <span class="nutrition-icon">🧬</span>
+                            <h3>抗氧化物质</h3>
+                            <p>含有丰富的多酚类和番茄红素，具有清除自由基的作用，对心血管健康有益。</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h4>关于本站</h4>
+                    <p>本站专注于提供高清、优质的番石榴及相关热带水果的图片素材，致力于服务于设计师、餐饮从业者及美食爱好者。</p>
+                </div>
+                <div class="footer-col">
+                    <h4>热门分类</h4>
+                    <ul>
+                        <li><a href="#">鲜果摄影</a></li>
+                        <li><a href="#">植物图鉴</a></li>
+                        <li><a href="#">食材特写</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>使用帮助</h4>
+                    <ul>
+                        <li><a href="#">版权声明</a></li>
+                        <li><a href="#">图片来源</a></li>
+                        <li><a href="#">联系我们</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2023 番石榴图库. All Rights Reserved. 本页面图片仅供展示参考.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // 简单的交互逻辑：筛选按钮点击效果
+        document.querySelectorAll('.filter-btn').forEach(button => {
+            button.addEventListener('click', function() {
+                // 移除所有按钮的 active 类
+                document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+                // 激活当前点击的按钮
+                this.classList.add('active');
+                
+                // 简单的视觉反馈，实际项目中可对接筛选逻辑
+                const category = this.textContent;
+                console.log(`筛选分类: ${category}`);
+            });
+        });
+
+        // 平滑滚动
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
