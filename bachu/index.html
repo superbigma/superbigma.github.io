@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="罢黜百科 - 深入解析中国古代政治制度与罢黜百家。了解罢黜的起源、历史背景、文化影响及在现代语境下的应用。">
+    <meta name="keywords" content="罢黜, 罢黜百家, 中国古代政治, 儒家独尊, 独尊儒术">
+    <title>罢黜-中国古代政治制度与百家争鸣的历史解析</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #8B4513;
+            --secondary-color: #D2691E;
+            --bg-color: #FDFBF7;
+            --card-bg: #FFFFFF;
+            --text-main: #2C2C2C;
+            --text-light: #666666;
+            --border-color: #E0E0E0;
+            --spacing-unit: 1rem;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "PingFang SC", "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.7;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: var(--secondary-color);
+        }
+
+        /* Header */
+        header {
+            background-color: var(--card-bg);
+            border-bottom: 1px solid var(--border-color);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+            height: 70px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            font-weight: normal;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        nav a {
+            font-size: 1rem;
+            font-weight: 500;
+        }
+
+        nav a.active {
+            color: var(--primary-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 4rem 1rem;
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.3;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            margin-bottom: 2rem;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.8rem 2rem;
+            background-color: white;
+            color: var(--primary-color);
+            border-radius: 4px;
+            font-weight: bold;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+
+        /* Main Layout */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 3rem 1rem;
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 2rem;
+        }
+
+        /* Section Styling */
+        section {
+            margin-bottom: 3rem;
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--secondary-color);
+            display: inline-block;
+        }
+
+        /* Article Content */
+        article {
+            background: var(--card-bg);
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+
+        article h2 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: var(--text-main);
+        }
+
+        article p {
+            margin-bottom: 1.5rem;
+            text-align: justify;
+        }
+
+        .highlight-box {
+            background-color: #FFF8E1;
+            border-left: 4px solid var(--secondary-color);
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 0 4px 4px 0;
+        }
+
+        .highlight-box h3 {
+            margin-bottom: 0.5rem;
+            color: var(--primary-color);
+        }
+
+        /* Sidebar */
+        aside {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .sidebar-card {
+            background: var(--card-bg);
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+
+        .sidebar-card h3 {
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+
+        .list-group {
+            list-style: none;
+        }
+
+        .list-group li {
+            margin-bottom: 0.8rem;
+            padding-bottom: 0.8rem;
+            border-bottom: 1px dashed var(--border-color);
+        }
+
+        .list-group li:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .list-group a {
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        .list-group a:hover {
+            color: var(--secondary-color);
+        }
+
+        /* Timeline */
+        .timeline-item {
+            position: relative;
+            padding-left: 2rem;
+            margin-bottom: 1.5rem;
+            border-left: 2px solid var(--border-color);
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -6px;
+            top: 0;
+            width: 10px;
+            height: 10px;
+            background-color: var(--secondary-color);
+            border-radius: 50%;
+        }
+
+        .timeline-item strong {
+            display: block;
+            margin-bottom: 0.3rem;
+            color: var(--primary-color);
+        }
+
+        /* Comparison Table */
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+            font-size: 0.95rem;
+        }
+
+        .comparison-table th, .comparison-table td {
+            border: 1px solid var(--border-color);
+            padding: 0.8rem;
+            text-align: left;
+        }
+
+        .comparison-table th {
+            background-color: #F5F5F5;
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+
+        /* FAQ */
+        .faq-item {
+            margin-bottom: 1rem;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 1rem;
+        }
+
+        .faq-question {
+            font-weight: bold;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-answer {
+            margin-top: 0.5rem;
+            color: var(--text-light);
+            display: none;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: #ccc;
+            padding: 3rem 1rem;
+            margin-top: 3rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+        }
+
+        .footer-col h4 {
+            color: white;
+            margin-bottom: 1rem;
+        }
+
+        .footer-col ul {
+            list-style: none;
+        }
+
+        .footer-col li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-col a:hover {
+            color: white;
+        }
+
+        .copyright {
+            text-align: center;
+            margin-top: 3rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid #444;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+
+            .nav-container {
+                flex-direction: column;
+                height: auto;
+                padding: 1rem;
+                gap: 1rem;
+            }
+
+            nav ul {
+                gap: 1rem;
+                font-size: 0.9rem;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="nav-container">
+        <div class="logo">
+            罢黜百科 <span>历史与文化的深度解析</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#" class="active">首页</a></li>
+                <li><a href="#origin">起源背景</a></li>
+                <li><a href="#impact">历史影响</a></li>
+                <li><a href="#comparison">对比分析</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<section class="hero">
+    <div class="hero-content">
+        <h1>罢黜百家，独尊儒术</h1>
+        <p>深入探究中国古代政治制度中的“罢黜”现象，了解其如何塑造了中国两千多年的文化格局与社会结构。</p>
+        <a href="#origin" class="btn">开始阅读</a>
+    </div>
+</section>
+
+<div class="container">
+    <!-- Main Content -->
+    <main>
+        <article id="origin">
+            <h2>什么是“罢黜”？</h2>
+            <p>“罢黜”一词在古代汉语中意为“排除、废黜”。在政治语境下，它通常指统治者通过行政力量或意识形态手段，对某些学派、学说或人物进行压制或排斥，使其不再占据主流地位。这一概念最为人熟知的用法便是西汉时期董仲舒提出的“罢黜百家，独尊儒术”。</p>
+            
+            <div class="highlight-box">
+                <h3>核心定义</h3>
+                <p>“罢黜百家”并非简单的消灭，而是一种<strong>确立主流意识形态</strong>的政治策略。它要求在思想文化领域，排除异端学说，确立儒家思想为国家正统，从而为中央集权的政治体制提供合法性支撑。</p>
+            </div>
+
+            <h2>历史背景与实施</h2>
+            <p>秦朝统一六国后，曾实行“焚书坑儒”，虽然手段极端，但同样体现了对思想控制的渴望。然而，秦朝二世而亡，暴露了单纯依靠严刑峻法无法维持长久统治的弊端。</p>
+            <p>到了西汉初年，统治者吸取了秦亡教训，采取了“黄老之学”的无为而治政策。但随着社会经济的复苏，中央集权的需求日益增强，传统的道家思想已不足以支撑大一统帝国的治理需要。此时，董仲舒向汉武帝提出了这一著名的政治主张。</p>
+            <p>汉武帝采纳了这一建议，下令停止对其他诸子百家学说的官方资助，转而独尊孔子及其儒家经典。这一决策标志着中国政治思想史上的重大转折。</p>
+        </article>
+
+        <article id="impact">
+            <h2>深远的历史影响</h2>
+            <p>“罢黜百家”对中国历史产生了深远且持久的影响：</p>
+            <ul>
+                <li><strong>确立儒家正统地位：</strong> 儒家思想从此成为历代王朝的官方意识形态，孔孟之道成为士大夫阶层的必经之路。</li>
+                <li><strong>文化整合：</strong> 它有效地整合了当时混乱的诸子百家思想，形成了一个相对统一的文化内核，促进了中华民族共同心理的形成。</li>
+                <li><strong>科举制度的雏形：</strong> 为了选拔符合儒家标准的官僚，后世逐渐发展出了科举制度，改变了选官制度，也进一步巩固了“罢黜百家”的成果。</li>
+            </ul>
+        </article>
+    </main>
+
+    <!-- Sidebar -->
+    <aside>
+        <div class="sidebar-card">
+            <h3>历史时间线</h3>
+            <ul class="list-group">
+                <li class="timeline-item">
+                    <strong>前221年</strong>
+                    <span>秦朝建立，焚书坑儒，思想控制初现。</span>
+                </li>
+                <li class="timeline-item">
+                    <strong>前140年左右</strong>
+                    <span>汉武帝即位，董仲舒提出“罢黜百家，独尊儒术”。</span>
+                </li>
+                <li class="timeline-item">
+                    <strong>前134年</strong>
+                    <span>汉武帝正式推行儒术，设立五经博士。</span>
+                </li>
+                <li class="timeline-item">
+                    <strong>公元605年</strong>
+                    <span>隋炀帝设立进士科，科举制确立，儒家思想成为选官标准。</span>
+                </li>
+            </ul>
+        </div>
+
+        <div class="sidebar-card">
+            <h3>相关概念</h3>
+            <ul class="list-group">
+                <li><a href="#">独尊儒术</a></li>
+                <li><a href="#">五经博士</a></li>
+                <li><a href="#">天人感应</a></li>
+                <li><a href="#">三纲五常</a></li>
+            </ul>
+        </div>
+
+        <div class="sidebar-card">
+            <h3>常见问题 (FAQ)</h3>
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">为什么汉武帝要“罢黜百家”？<span>+</span></div>
+                <div class="faq-answer">为了加强中央集权，巩固大一统局面。儒家思想强调等级秩序和忠君思想，最符合当时政治统治的需要。</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">“罢黜百家”是否完全禁止了其他学派？<span>+</span></div>
+                <div class="faq-answer">并非完全禁止，而是停止了官方资助和讲学，使其在社会上不再处于主流地位，但在民间仍有一定传播空间。</div>
+            </div>
+        </div>
+    </aside>
+</div>
+
+<footer>
+    <div class="footer-content">
+        <div class="footer-col">
+            <h4>关于本站</h4>
+            <p>本站致力于提供关于中国古代历史、文化及政治制度的深度解析与科普内容。</p>
+        </div>
+        <div class="footer-col">
+            <h4>栏目导航</h4>
+            <ul>
+                <li><a href="#">历史事件</a></li>
+                <li><a href="#">思想演变</a></li>
+                <li><a href="#">制度研究</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>联系我们</h4>
+            <ul>
+                <li><a href="#">意见反馈</a></li>
+                <li><a href="#">版权声明</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>&copy; 2023 罢黜百科. All Rights Reserved.</p>
+    </div>
+</footer>
+
+<script>
+    function toggleFaq(element) {
+        const parent = element.parentElement;
+        const icon = element.querySelector('span');
+        
+        parent.classList.toggle('active');
+        
+        if (parent.classList.contains('active')) {
+            icon.textContent = '-';
+        } else {
+            icon.textContent = '+';
+        }
+    }
+
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
+    });
+</script>
+
+</body>
+</html>
