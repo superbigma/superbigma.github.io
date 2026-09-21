@@ -1,0 +1,816 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="xingjiao-星际探索与未来科技资讯平台，提供最新的航天动态、深空探测数据、太空旅行指南及前沿科技解读。">
+    <meta name="keywords" content="xingjiao,星际探索,太空旅行,航天科技,深空探测">
+    <title>xingjiao-星际探索与未来科技资讯平台</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --bg-deep: #05070a;
+            --bg-card: #0f1219;
+            --bg-card-hover: #161b26;
+            --text-main: #e0e6ed;
+            --text-sub: #94a3b8;
+            --accent-primary: #3b82f6;
+            --accent-secondary: #8b5cf6;
+            --accent-glow: rgba(59, 130, 246, 0.5);
+            --border-color: #1e293b;
+            --font-main: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--bg-deep);
+            color: var(--text-main);
+            font-family: var(--font-main);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s ease;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background-color: rgba(5, 7, 10, 0.9);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border-color);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            padding: 1rem 0;
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            background: linear-gradient(135deg, #fff, var(--accent-primary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            font-size: 0.8rem;
+            color: var(--text-sub);
+            background: rgba(255,255,255,0.1);
+            padding: 2px 8px;
+            border-radius: 4px;
+            -webkit-text-fill-color: var(--text-sub);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav a {
+            font-size: 0.95rem;
+            color: var(--text-sub);
+            font-weight: 500;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--accent-primary);
+        }
+
+        .search-btn {
+            background: transparent;
+            border: 1px solid var(--border-color);
+            color: var(--text-main);
+            padding: 8px 16px;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .search-btn:hover {
+            border-color: var(--accent-primary);
+            box-shadow: 0 0 10px var(--accent-glow);
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            overflow: hidden;
+            margin-bottom: 3rem;
+        }
+
+        .hero-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at center, #1a233a 0%, #05070a 70%);
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+            padding: 0 20px;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+            text-shadow: 0 0 30px rgba(59, 130, 246, 0.3);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--text-sub);
+            margin-bottom: 2.5rem;
+        }
+
+        .cta-group {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+        }
+
+        .btn {
+            padding: 12px 30px;
+            border-radius: 6px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+            display: inline-block;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+            color: white;
+            border: none;
+            box-shadow: 0 4px 15px rgba(59, 130, 246, 0.4);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(59, 130, 246, 0.6);
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 1px solid var(--border-color);
+            color: var(--text-main);
+        }
+
+        .btn-outline:hover {
+            border-color: var(--text-main);
+            background: rgba(255,255,255,0.05);
+        }
+
+        /* Stats Bar */
+        .stats-bar {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1rem;
+            margin-bottom: 3rem;
+            padding: 1.5rem;
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+        }
+
+        .stat-item h3 {
+            font-size: 1.8rem;
+            color: var(--accent-primary);
+            margin-bottom: 0.2rem;
+        }
+
+        .stat-item p {
+            font-size: 0.9rem;
+            color: var(--text-sub);
+        }
+
+        /* Section Layout */
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            margin-bottom: 2rem;
+            border-left: 4px solid var(--accent-primary);
+            padding-left: 1rem;
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        .section-more {
+            font-size: 0.9rem;
+            color: var(--accent-primary);
+            cursor: pointer;
+        }
+
+        /* Grid Layouts */
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        .grid-4 {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 4rem;
+        }
+
+        /* Card Styles */
+        .card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent-primary);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+
+        .card-img-wrapper {
+            width: 100%;
+            height: 180px;
+            background-color: #000;
+            position: relative;
+        }
+
+        .card-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.8;
+            transition: opacity 0.3s;
+        }
+
+        .card:hover .card-img {
+            opacity: 1;
+        }
+
+        .card-badge {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background: rgba(0,0,0,0.7);
+            color: #fff;
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            backdrop-filter: blur(4px);
+        }
+
+        .card-body {
+            padding: 1.5rem;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-meta {
+            font-size: 0.8rem;
+            color: var(--text-sub);
+            margin-bottom: 0.5rem;
+        }
+
+        .card-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.8rem;
+            line-height: 1.4;
+        }
+
+        .card-excerpt {
+            font-size: 0.9rem;
+            color: var(--text-sub);
+            margin-bottom: 1.5rem;
+            flex: 1;
+        }
+
+        .card-footer {
+            border-top: 1px solid var(--border-color);
+            padding-top: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.85rem;
+            color: var(--text-sub);
+        }
+
+        /* Feature List (Technology) */
+        .tech-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .tech-item {
+            display: flex;
+            gap: 1.5rem;
+            padding: 1.5rem;
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            transition: background 0.3s;
+        }
+
+        .tech-item:hover {
+            background: var(--bg-card-hover);
+        }
+
+        .tech-icon {
+            width: 50px;
+            height: 50px;
+            background: rgba(59, 130, 246, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--accent-primary);
+            font-size: 1.5rem;
+            flex-shrink: 0;
+        }
+
+        .tech-content h4 {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .tech-content p {
+            font-size: 0.9rem;
+            color: var(--text-sub);
+        }
+
+        /* Timeline Section */
+        .timeline {
+            position: relative;
+            padding-left: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: var(--border-color);
+        }
+
+        .timeline-item {
+            position: relative;
+            padding-bottom: 2rem;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -2.4rem;
+            top: 0.5rem;
+            width: 16px;
+            height: 16px;
+            background: var(--bg-deep);
+            border: 2px solid var(--accent-primary);
+            border-radius: 50%;
+        }
+
+        .timeline-date {
+            font-size: 0.85rem;
+            color: var(--accent-primary);
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            background: var(--bg-card);
+            padding: 3rem;
+            border-radius: 12px;
+            margin-bottom: 4rem;
+            border: 1px solid var(--border-color);
+        }
+
+        .faq-item {
+            margin-bottom: 1.5rem;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 1.5rem;
+        }
+
+        .faq-item:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+            margin-bottom: 0;
+        }
+
+        .faq-question {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.8rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-answer {
+            color: var(--text-sub);
+            font-size: 0.95rem;
+            display: none; /* JS will toggle this */
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        /* Footer */
+        footer {
+            background: #020406;
+            border-top: 1px solid var(--border-color);
+            padding: 4rem 0 2rem;
+            margin-top: 4rem;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-brand p {
+            color: var(--text-sub);
+            margin-top: 1rem;
+            font-size: 0.9rem;
+            max-width: 300px;
+        }
+
+        .footer-col h4 {
+            color: var(--text-main);
+            margin-bottom: 1.5rem;
+            font-size: 1rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-col ul li a {
+            color: var(--text-sub);
+            font-size: 0.9rem;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--accent-primary);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid var(--border-color);
+            color: #64748b;
+            font-size: 0.85rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-wrapper {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            nav ul {
+                gap: 1rem;
+                font-size: 0.85rem;
+            }
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            .stats-bar {
+                grid-template-columns: 1fr 1fr;
+            }
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            .grid-3, .grid-4 {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-wrapper">
+            <a href="#" class="logo">
+                xingjiao
+                <span>STARLINK</span>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">首页</a></li>
+                    <li><a href="#">深空探测</a></li>
+                    <li><a href="#">航天科技</a></li>
+                    <li><a href="#">太空旅行</a></li>
+                    <li><a href="#">科普专栏</a></li>
+                </ul>
+            </nav>
+            <button class="search-btn">搜索资源</button>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-bg"></div>
+            <div class="hero-content">
+                <h1>探索无垠宇宙<br>连接人类未来</h1>
+                <p>为您提供最新的全球航天动态、前沿科技解读以及通往星辰大海的实用指南。</p>
+                <div class="cta-group">
+                    <button class="btn btn-primary">开始探索</button>
+                    <button class="btn btn-outline">查看实时数据</button>
+                </div>
+            </div>
+        </section>
+
+        <div class="container">
+            <!-- Stats Bar -->
+            <div class="stats-bar">
+                <div class="stat-item">
+                    <h3>4,000+</h3>
+                    <p>已发射卫星</p>
+                </div>
+                <div class="stat-item">
+                    <h3>12</h3>
+                    <p>载人航天任务</p>
+                </div>
+                <div class="stat-item">
+                    <h3>300+</h3>
+                    <p>活跃探测器</p>
+                </div>
+                <div class="stat-item">
+                    <h3>24h</h3>
+                    <p>全球追踪覆盖</p>
+                </div>
+            </div>
+
+            <!-- Featured News -->
+            <section class="section-header">
+                <h2 class="section-title">星际前沿</h2>
+                <span class="section-more">查看全部 &rarr;</span>
+            </section>
+
+            <div class="grid-3">
+                <article class="card">
+                    <div class="card-img-wrapper">
+                        <img src="https://picsum.photos/seed/space1/400/250" alt="火星探测" class="card-img">
+                        <span class="card-badge">重磅</span>
+                    </div>
+                    <div class="card-body">
+                        <div class="card-meta">2023-10-24 · 深空探测</div>
+                        <h3 class="card-title">火星样本返回任务：人类迈向地外生存的关键一步</h3>
+                        <p class="card-excerpt">随着火星样本返回计划的推进，科学家们正在攻克从火星带回物质并确保安全返回地球的技术难关。</p>
+                        <div class="card-footer">
+                            <span>阅读 2.4k</span>
+                            <span>评论 128</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <div class="card-img-wrapper">
+                        <img src="https://picsum.photos/seed/space2/400/250" alt="太空电梯" class="card-img">
+                        <span class="card-badge">科技</span>
+                    </div>
+                    <div class="card-body">
+                        <div class="card-meta">2023-10-22 · 未来科技</div>
+                        <h3 class="card-title">太空电梯概念验证：纳米材料能否托起人类梦想？</h3>
+                        <p class="card-excerpt">碳纳米管技术的突破为太空电梯提供了理论基础，但工程实现仍面临巨大的成本与结构挑战。</p>
+                        <div class="card-footer">
+                            <span>阅读 1.8k</span>
+                            <span>评论 85</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <div class="card-img-wrapper">
+                        <img src="https://picsum.photos/seed/space3/400/250" alt="系外行星" class="card-img">
+                        <span class="card-badge">天文</span>
+                    </div>
+                    <div class="card-body">
+                        <div class="card-meta">2023-10-20 · 天文学</div>
+                        <h3 class="card-title">詹姆斯·韦伯望远镜发现宜居带新星球</h3>
+                        <p class="card-excerpt">韦伯望远镜捕捉到位于天鹅座的一颗类地行星，其大气成分分析显示可能存在液态水。</p>
+                        <div class="card-footer">
+                            <span>阅读 5.1k</span>
+                            <span>评论 320</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Tech Solutions -->
+            <section class="section-header">
+                <h2 class="section-title">航天核心技术</h2>
+                <span class="section-more">技术图谱 &rarr;</span>
+            </section>
+
+            <div class="tech-list">
+                <div class="tech-item">
+                    <div class="tech-icon">🚀</div>
+                    <div class="tech-content">
+                        <h4>可重复使用火箭技术</h4>
+                        <p>降低入轨成本，使大规模太空运输成为可能，是商业航天的核心驱动力。</p>
+                    </div>
+                </div>
+                <div class="tech-item">
+                    <div class="tech-icon">🛰️</div>
+                    <div class="tech-content">
+                        <h4>卫星互联网组网</h4>
+                        <p>构建全球无缝覆盖的通信网络，解决偏远地区及海洋的信号传输问题。</p>
+                    </div>
+                </div>
+                <div class="tech-item">
+                    <div class="tech-icon">🔋</div>
+                    <div class="tech-content">
+                        <h4>核热推进系统</h4>
+                        <p>利用核反应堆产生高温气体加速，大幅缩短火星等深空探测的航行时间。</p>
+                    </div>
+                </div>
+                <div class="tech-item">
+                    <div class="tech-icon">🧬</div>
+                    <div class="tech-content">
+                        <h4>闭环生命维持系统</h4>
+                        <p>为长期太空驻留提供氧气、水和食物循环，保障宇航员在深空的生命安全。</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Timeline -->
+            <section class="section-header">
+                <h2 class="section-title">星际里程碑</h2>
+            </section>
+
+            <div class="timeline">
+                <div class="timeline-item">
+                    <span class="timeline-date">1957年</span>
+                    <h3>人类第一颗人造卫星发射成功</h3>
+                    <p style="color: var(--text-sub);">苏联成功发射“斯普特尼克1号”，开启了人类航天时代。</p>
+                </div>
+                <div class="timeline-item">
+                    <span class="timeline-date">1969年</span>
+                    <h3>阿波罗11号登月任务</h3>
+                    <p style="color: var(--text-sub);">尼尔·阿姆斯特朗成为第一个踏上月球表面的人类。</p>
+                </div>
+                <div class="timeline-item">
+                    <span class="timeline-date">2021年</span>
+                    <h3>商业载人航天时代开启</h3>
+                    <p style="color: var(--text-sub);">私营企业首次将宇航员送入国际空间站，航天商业化进程加速。</p>
+                </div>
+                <div class="timeline-item">
+                    <span class="timeline-date">2030s</span>
+                    <h3>建立月球科研基地计划</h3>
+                    <p style="color: var(--text-sub);">多国联合推进月球永久基地建设，作为火星探测的中转站。</p>
+                </div>
+            </div>
+
+            <!-- FAQ Section -->
+            <section class="section-header">
+                <h2 class="section-title">常见问题解答</h2>
+            </section>
+
+            <div class="faq-section">
+                <div class="faq-item">
+                    <div class="faq-question">普通人如何参与太空旅行？ <span>+</span></div>
+                    <div class="faq-answer">
+                        目前私人商业航天公司提供了亚轨道飞行服务，票价相对较高，但体验时间虽短但足以体验失重感。未来随着技术成熟，费用有望大幅下降。
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">太空垃圾如何处理？ <span>+</span></div>
+                    <div class="faq-answer">
+                        国际社会正在制定严格的太空垃圾清理规范。现有的清理技术包括使用机械臂捕获、激光清除碎片以及设计可自毁的卫星。
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">为什么需要建立月球基地？ <span>+</span></div>
+                    <div class="faq-answer">
+                        月球基地是人类迈向深空的前哨站。它可以提供氦-3等珍贵能源，同时也是研究地球起源和生命演化的重要实验室。
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#" class="logo">xingjiao</a>
+                    <p>致力于传播宇宙奥秘，探索科技边界，连接人类与星辰大海的桥梁。</p>
+                </div>
+                <div class="footer-col">
+                    <h4>关于我们</h4>
+                    <ul>
+                        <li><a href="#">平台简介</a></li>
+                        <li><a href="#">编辑团队</a></li>
+                        <li><a href="#">加入我们</a></li>
+                        <li><a href="#">联系方式</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>探索频道</h4>
+                    <ul>
+                        <li><a href="#">火星探索</a></li>
+                        <li><a href="#">黑洞之谜</a></li>
+                        <li><a href="#">星际移民</a></li>
+                        <li><a href="#">量子通信</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>法律条款</h4>
+                    <ul>
+                        <li><a href="#">隐私政策</a></li>
+                        <li><a href="#">使用协议</a></li>
+                        <li><a href="#">版权声明</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                &copy; 2023 xingjiao 星际探索平台. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple FAQ Toggle Logic
+        document.querySelectorAll('.faq-question').forEach(item => {
+            item.addEventListener('click', () => {
+                const parent = item.parentElement;
+                parent.classList.toggle('active');
+                
+                // Toggle plus/minus icon visual (optional enhancement)
+                const span = item.querySelector('span');
+                span.textContent = parent.classList.contains('active') ? '-' : '+';
+            });
+        });
+
+        // Search Button Interaction (Simulation)
+        document.querySelector('.search-btn').addEventListener('click', () => {
+            const term = prompt("请输入您想搜索的航天关键词：", "火星");
+            if (term) {
+                alert(`正在搜索关于 "${term}" 的最新星际资讯...\n(这是一个演示页面)`);
+            }
+        });
+    </script>
+</body>
+      </html>
