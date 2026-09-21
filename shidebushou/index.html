@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>失的部首 - 汉字结构解析与部首字典查询指南</title>
+    <meta name="description" content="本站提供汉字“失”的详细部首解析，包含失的部首名称、笔画数、拼音、释义以及相关汉字的结构拆解，帮助用户快速掌握汉字部首知识。">
+    <meta name="keywords" content="失的部首, 失字部首, 汉字部首, 失字结构, 汉字查询">
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #3498db;
+            --bg-color: #f8f9fa;
+            --card-bg: #ffffff;
+            --text-main: #333333;
+            --text-secondary: #666666;
+            --border-color: #e0e0e0;
+            --spacing-unit: 16px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: var(--accent-color);
+            transition: color 0.2s;
+        }
+
+        a:hover {
+            color: #2980b9;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--card-bg);
+            border-bottom: 1px solid var(--border-color);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo span {
+            font-size: 1.5rem;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+        }
+
+        nav a {
+            color: var(--text-secondary);
+            font-weight: 500;
+            font-size: 0.95rem;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--primary-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary-color) 0%, #4ca1af 100%);
+            color: white;
+            padding: 3rem 0;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Main Content */
+        main {
+            padding-bottom: 4rem;
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+
+        @media (min-width: 768px) {
+            .content-grid {
+                grid-template-columns: 2fr 1fr;
+            }
+        }
+
+        /* Section Styles */
+        section {
+            margin-bottom: 2rem;
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            border-left: 5px solid var(--accent-color);
+            padding-left: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        /* Detail Card */
+        .detail-card {
+            background: var(--card-bg);
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            padding: 2rem;
+            border: 1px solid var(--border-color);
+        }
+
+        .char-display {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .big-char {
+            font-size: 8rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            line-height: 1;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .info-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 1rem 0;
+            border-bottom: 1px dashed var(--border-color);
+        }
+
+        .info-row:last-child {
+            border-bottom: none;
+        }
+
+        .info-label {
+            color: var(--text-secondary);
+            font-weight: 500;
+        }
+
+        .info-value {
+            font-weight: 600;
+            color: var(--primary-color);
+        }
+
+        /* Structure Visualization */
+        .structure-viz {
+            margin-top: 2rem;
+            padding: 1.5rem;
+            background-color: #f0f4f8;
+            border-radius: 6px;
+            text-align: center;
+        }
+
+        .structure-viz h4 {
+            margin-bottom: 1rem;
+            color: var(--text-secondary);
+        }
+
+        .stroke-box {
+            display: inline-block;
+            font-family: "KaiTi", "楷体", serif;
+            font-size: 2.5rem;
+            line-height: 2;
+        }
+
+        .stroke-desc {
+            margin-top: 10px;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        /* Sidebar */
+        aside {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .sub-list {
+            list-style: none;
+        }
+
+        .sub-list li {
+            margin-bottom: 0.8rem;
+            padding-bottom: 0.8rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .sub-list li:last-child {
+            border-bottom: none;
+        }
+
+        .sub-list a {
+            color: var(--text-main);
+            font-size: 1rem;
+        }
+
+        .sub-list a:hover {
+            text-decoration: underline;
+        }
+
+        .tag-cloud {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .tag {
+            background-color: #eef2f5;
+            color: var(--text-secondary);
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 0.85rem;
+        }
+
+        /* Definition */
+        .definition-box {
+            background-color: #fff8e1;
+            border-left: 4px solid #ffc107;
+            padding: 1.5rem;
+            margin-top: 2rem;
+            border-radius: 0 4px 4px 0;
+        }
+
+        .definition-box h3 {
+            font-size: 1.1rem;
+            color: #856404;
+            margin-bottom: 0.5rem;
+        }
+
+        .definition-box p {
+            font-size: 0.95rem;
+            color: #666;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+            font-size: 0.9rem;
+            margin-top: auto;
+        }
+
+        footer p {
+            opacity: 0.7;
+        }
+
+        /* Utility */
+        .badge {
+            display: inline-block;
+            padding: 2px 6px;
+            font-size: 0.75rem;
+            border-radius: 4px;
+            margin-left: 8px;
+            vertical-align: middle;
+        }
+        .badge-han{ background-color: #e3f2fd; color: #1565c0; }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="container header-inner">
+        <div class="logo">
+            <span>失</span> 汉字字典
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#" class="active">首页</a></li>
+                <li><a href="#">部首大全</a></li>
+                <li><a href="#">笔画查询</a></li>
+                <li><a href="#">字源解析</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<div class="hero">
+    <div class="container">
+        <h1>失的部首</h1>
+        <p>深入解析汉字“失”的部首归属、笔画顺序及字形结构，助您快速掌握汉字基础知识。</p>
+    </div>
+</div>
+
+<main class="container">
+    <div class="content-grid">
+        <!-- Left Content -->
+        <div class="main-column">
+            <!-- Character Detail -->
+            <section>
+                <div class="section-title">汉字基本信息</div>
+                <div class="detail-card">
+                    <div class="char-display">
+                        <span class="big-char">失</span>
+                    </div>
+                    
+                    <div class="info-row">
+                        <span class="info-label">汉字拼音</span>
+                        <span class="info-value">shī</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">汉字注音</span>
+                        <span class="info-value">ㄕ</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">部首名称</span>
+                        <span class="info-value">丿部</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">部首笔画</span>
+                        <span class="info-value">2画</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">总笔画数</span>
+                        <span class="info-value">5画</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">汉字结构</span>
+                        <span class="info-value">上下结构</span>
+                    </div>
+
+                    <div class="structure-viz">
+                        <h4>字形结构拆解</h4>
+                        <div class="stroke-box">
+                            <div style="display:inline-block; width:60px; height:60px; border:1px solid #ccc; border-radius:4px; line-height:60px; margin:0 10px;">失</div>
+                            <div style="display:inline-block; font-size:1rem; vertical-align:middle; color:#666;">= 丿 + 夂</div>
+                        </div>
+                        <p class="stroke-desc">上部为“丿”（撇），下部为“夂”（折文旁变体）。</p>
+                    </div>
+
+                    <div class="definition-box">
+                        <h3>基本释义</h3>
+                        <p>1. 落下，遗漏：丢三落四。失手。<br>
+                           2. 没有掌握住：失言。失职。<br>
+                           3. 找不着：迷失方向。<br>
+                           4. 违背，丢失：失信。失约。</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Related Characters -->
+            <section>
+                <div class="section-title">
+                    <span>相关汉字与部首</span>
+                    <a href="#" style="font-size:0.9rem;">查看更多 &rarr;</a>
+                </div>
+                <div class="detail-card">
+                    <p style="margin-bottom:1rem; color:#666;">以下汉字均包含“失”的部首（丿部）或与其结构密切相关：</p>
+                    <ul class="sub-list">
+                        <li><a href="#">发 <span class="badge badge-han">丿部</span></a> <span style="font-size:0.85rem; color:#999; float:right;">发 (fā)</span></li>
+                        <li><a href="#">丢 <span class="badge badge-han">丿部</span></a> <span style="font-size:0.85rem; color:#999; float:right;">丢 (diū)</span></li>
+                        <li><a href="#">决 <span class="badge badge-han">丿部</span></a> <span style="font-size:0.85rem; color:#999; float:right;">决 (jué)</span></li>
+                        <li><a href="#">处 <span class="badge badge-han">夂部</span></a> <span style="font-size:0.85rem; color:#999; float:right;">处 (chǔ)</span></li>
+                        <li><a href="#">及 <span class="badge badge-han">丿部</span></a> <span style="font-size:0.85rem; color:#999; float:right;">及 (jí)</span></li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+
+        <!-- Right Sidebar -->
+        <aside>
+            <div class="detail-card">
+                <div class="section-title" style="font-size:1.25rem; border:none; padding:0;">部首索引</div>
+                <p style="font-size:0.9rem; color:#666; margin-bottom:1rem;">常见丿部汉字分类：</p>
+                <ul class="sub-list">
+                    <li><a href="#">一画部首</a></li>
+                    <li><a href="#">二画部首</a></li>
+                    <li><a href="#">三画部首</a></li>
+                    <li><a href="#">四画部首</a></li>
+                </ul>
+            </div>
+
+            <div class="detail-card">
+                <div class="section-title" style="font-size:1.25rem; border:none; padding:0;">常用词组</div>
+                <div class="tag-cloud">
+                    <span class="tag">丢失</span>
+                    <span class="tag">失去</span>
+                    <span class="tag">失误</span>
+                    <span class="tag">失踪</span>
+                    <span class="tag">失明</span>
+                    <span class="tag">失声</span>
+                </div>
+            </div>
+
+            <div class="detail-card">
+                <div class="section-title" style="font-size:1.25rem; border:none; padding:0;">字源演变</div>
+                <p style="font-size:0.9rem; color:#666; line-height:1.8;">
+                    “失”字在甲骨文和金文中，字形像人手从高处掉落东西的样子。本义为掉落，后引申为丢失、遗漏等义。
+                </p>
+            </div>
+        </aside>
+    </div>
+</main>
+
+<footer>
+    <div class="container">
+        <p>&copy; 2023 汉字结构解析网. All Rights Reserved.</p>
+        <p>本站内容仅供学习与参考，旨在普及汉字文化。</p>
+    </div>
+</footer>
+
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+
+</body>
+</html>
