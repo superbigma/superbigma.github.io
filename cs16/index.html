@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cs1.6napos视频 - CS1.6 NAPoS 模式精彩集锦与实战教学</title>
+    <meta name="description" content="CS1.6 NAPoS 模式视频资源站，提供最精彩的 CS1.6 NAPoS 精彩集锦、战术解析、主播实况及高玩操作教学视频下载与在线播放。">
+    <meta name="keywords" content="cs1.6napos视频, cs1.6 NAPoS, CS1.6 模式, CS1.6 视频, CS1.6 战术">
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #3b82f6;
+            --secondary-color: #1e293b;
+            --accent-color: #f59e0b;
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --text-main: #1e293b;
+            --text-sub: #64748b;
+            --border-radius: 8px;
+            --spacing: 24px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: var(--accent-color);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 20px;
+        }
+
+        nav a {
+            color: #cbd5e1;
+            transition: color 0.3s;
+            font-size: 0.95rem;
+        }
+
+        nav a:hover, nav a.active {
+            color: white;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--secondary-color) 0%, #0f172a 100%);
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            color: #cbd5e1;
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin: 0 auto 30px;
+        }
+
+        .search-box {
+            display: inline-flex;
+            background: rgba(255,255,255,0.1);
+            padding: 5px;
+            border-radius: 50px;
+            backdrop-filter: blur(10px);
+        }
+
+        .search-box input {
+            border: none;
+            background: transparent;
+            padding: 12px 20px;
+            font-size: 1rem;
+            color: white;
+            width: 300px;
+            outline: none;
+        }
+
+        .search-box button {
+            background-color: var(--accent-color);
+            border: none;
+            padding: 10px 25px;
+            border-radius: 40px;
+            color: var(--secondary-color);
+            font-weight: bold;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+
+        .search-box button:hover {
+            transform: scale(1.05);
+        }
+
+        /* Section Titles */
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 25px;
+            border-left: 5px solid var(--accent-color);
+            padding-left: 15px;
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            color: var(--secondary-color);
+        }
+
+        .more-link {
+            color: var(--primary-color);
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        /* Video Grid */
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 25px;
+            margin-bottom: 50px;
+        }
+
+        .video-card {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s, box-shadow 0.3s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .video-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+
+        .thumbnail {
+            position: relative;
+            width: 100%;
+            padding-top: 56.25%; /* 16:9 Aspect Ratio */
+            background-color: #000;
+        }
+
+        .thumbnail img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.9;
+        }
+
+        .play-icon {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 50px;
+            height: 50px;
+            background: rgba(0,0,0,0.6);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            border: 2px solid white;
+        }
+
+        .duration {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            background: rgba(0,0,0,0.8);
+            color: white;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+        }
+
+        .card-content {
+            padding: 15px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-title {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: var(--text-main);
+            line-height: 1.4;
+        }
+
+        .card-meta {
+            font-size: 0.85rem;
+            color: var(--text-sub);
+            margin-top: auto;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        /* Feature Section (Guide) */
+        .guide-section {
+            background-color: white;
+            padding: 40px;
+            border-radius: var(--border-radius);
+            margin-bottom: 50px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+
+        .guide-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .guide-text h2 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: var(--secondary-color);
+        }
+
+        .guide-text p {
+            margin-bottom: 15px;
+            color: var(--text-sub);
+        }
+
+        .guide-list {
+            margin-top: 20px;
+        }
+
+        .guide-list li {
+            margin-bottom: 10px;
+            padding-left: 20px;
+            position: relative;
+            color: var(--text-main);
+        }
+
+        .guide-list li::before {
+            content: "✓";
+            color: var(--accent-color);
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+
+        .guide-image img {
+            width: 100%;
+            border-radius: var(--border-radius);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        /* Tags Cloud */
+        .tags-cloud {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .tag {
+            background: #e2e8f0;
+            color: var(--text-sub);
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            transition: all 0.2s;
+        }
+
+        .tag:hover {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--secondary-color);
+            color: #94a3b8;
+            padding: 40px 0 20px;
+            margin-top: 60px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .footer-col h4 {
+            color: white;
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 8px;
+        }
+
+        .footer-col ul li a:hover {
+            color: white;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #334155;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            .header-inner {
+                flex-direction: column;
+                gap: 15px;
+            }
+            nav ul {
+                gap: 15px;
+                font-size: 0.85rem;
+            }
+            .guide-content {
+                grid-template-columns: 1fr;
+            }
+            .search-box input {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container header-inner">
+            <div class="logo">
+                <span>CS</span>1.6 NAPoS 视频站
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">首页</a></li>
+                    <li><a href="#">精彩集锦</a></li>
+                    <li><a href="#">主播实况</a></li>
+                    <li><a href="#">战术教学</a></li>
+                    <li><a href="#">社区讨论</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <h1>重温经典，见证 NAPoS 模式的高光时刻</h1>
+                <p>CS1.6 NAPoS 模式视频聚合平台，收录全球顶尖玩家在 NAPoS 竞技模式下的精彩操作、极限翻盘与战术博弈。</p>
+                <div class="search-box">
+                    <input type="text" placeholder="搜索视频标题、主播或关键词...">
+                    <button type="button">搜索</button>
+                </div>
+            </div>
+        </section>
+
+        <div class="container">
+            <!-- Latest Videos -->
+            <section>
+                <div class="section-header">
+                    <h2 class="section-title">最新发布</h2>
+                    <a href="#" class="more-link">查看全部 &rarr;</a>
+                </div>
+                <div class="video-grid">
+                    <!-- Video Card 1 -->
+                    <article class="video-card">
+                        <a href="#" class="thumbnail">
+                            <img src="https://picsum.photos/seed/cs1.6napos1/400/225" alt="CS1.6 NAPoS 精彩集锦">
+                            <div class="play-icon">▶</div>
+                            <span class="duration">12:45</span>
+                        </a>
+                        <div class="card-content">
+                            <h3 class="card-title"><a href="#">CS1.6 NAPoS 极限残局：四打五反杀神操作</a></h3>
+                            <div class="card-meta">
+                                <span>高玩实况</span>
+                                <span>2小时前</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Video Card 2 -->
+                    <article class="video-card">
+                        <a href="#" class="thumbnail">
+                            <img src="https://picsum.photos/seed/cs1.6napos2/400/225" alt="NAPoS 战术解析">
+                            <div class="play-icon">▶</div>
+                            <span class="duration">08:30</span>
+                        </a>
+                        <div class="card-content">
+                            <h3 class="card-title"><a href="#">NAPoS 模式中路控图与道具配合教学</a></h3>
+                            <div class="card-meta">
+                                <span>战术教学</span>
+                                <span>5小时前</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Video Card 3 -->
+                    <article class="video-card">
+                        <a href="#" class="thumbnail">
+                            <img src="https://picsum.photos/seed/cs1.6napos3/400/225" alt="主播高玩直播回放">
+                            <div class="play-icon">▶</div>
+                            <span class="duration">45:10</span>
+                        </a>
+                        <div class="card-content">
+                            <h3 class="card-title"><a href="#">主播阿强 NAPoS 赛季冲分实战录像</a></h3>
+                            <div class="card-meta">
+                                <span>主播实况</span>
+                                <span>昨天</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Video Card 4 -->
+                    <article class="video-card">
+                        <a href="#" class="thumbnail">
+                            <img src="https://picsum.photos/seed/cs1.6napos4/400/225" alt="CS1.6 NAPoS 比赛集锦">
+                            <div class="play-icon">▶</div>
+                            <span class="duration">15:20</span>
+                        </a>
+                        <div class="card-content">
+                            <h3 class="card-title"><a href="#">NAPoS 淘汰赛决赛：史诗级对决回顾</a></h3>
+                            <div class="card-meta">
+                                <span>赛事集锦</span>
+                                <span>3天前</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Video Card 5 -->
+                    <article class="video-card">
+                        <a href="#" class="thumbnail">
+                            <img src="https://picsum.photos/seed/cs1.6napos5/400/225" alt="NAPoS 新手入门">
+                            <div class="play-icon">▶</div>
+                            <span class="duration">10:15</span>
+                        </a>
+                        <div class="card-content">
+                            <h3 class="card-title"><a href="#">CS1.6 NAPoS 模式新手快速上手指南</a></h3>
+                            <div class="card-meta">
+                                <span>新手教程</span>
+                                <span>1周前</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Video Card 6 -->
+                    <article class="video-card">
+                        <a href="#" class="thumbnail">
+                            <img src="https://picsum.photos/seed/cs1.6napos6/400/225" alt="NAPoS 枪法展示">
+                            <div class="play-icon">▶</div>
+                            <span class="duration">06:50</span>
+                        </a>
+                        <div class="card-content">
+                            <h3 class="card-title"><a href="#">AWP 神狙：NAPoS 模式下的瞬狙教学</a></h3>
+                            <div class="card-meta">
+                                <span>技巧分享</span>
+                                <span>2周前</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <!-- Guide Section -->
+            <section class="guide-section">
+                <div class="guide-content">
+                    <div class="guide-text">
+                        <h2>什么是 CS1.6 NAPoS 模式？</h2>
+                        <p>NAPoS 是 Counter-Strike 1.6 玩家社区中非常流行的一种竞技模式变体。它通常包含更快的游戏节奏、特殊的地图元素或特定的回合规则，强调团队配合与即时反应。</p>
+                        <p>在 NAPoS 模式中，玩家需要掌握不同于经典爆破模式的战术思路，例如控制特定的补给点、利用特殊的重生机制进行快速转点，以及团队分工明确的进攻与防守策略。</p>
+                        <ul class="guide-list">
+                            <li><strong>快节奏对抗：</strong> 拒绝拖沓，强调爆发力。</li>
+                            <li><strong>团队配合：</strong> 每一个回合都是生死攸关的战术博弈。</li>
+                            <li><strong>经典重制：</strong> 保留 CS1.6 标志性的枪感和音效。</li>
+                        </ul>
+                        <div class="tags-cloud">
+                            <a href="#" class="tag">CS1.6</a>
+                            <a href="#" class="tag">NAPoS</a>
+                            <a href="#" class="tag">竞技模式</a>
+                            <a href="#" class="tag">战术教学</a>
+                            <a href="#" class="tag">精彩集锦</a>
+                        </div>
+                    </div>
+                    <div class="guide-image">
+                        <img src="https://picsum.photos/seed/cs1.6naposbg/600/400" alt="CS1.6 NAPoS 游戏场景">
+                    </div>
+                </div>
+            </section>
+
+            <!-- Categories -->
+            <section>
+                <div class="section-header">
+                    <h2 class="section-title">热门分类</h2>
+                </div>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 15px;">
+                    <a href="#" class="tag" style="text-align: center; display: block; padding: 20px; background: white; border: 1px solid #e2e8f0;">战术教学</a>
+                    <a href="#" class="tag" style="text-align: center; display: block; padding: 20px; background: white; border: 1px solid #e2e8f0;">精彩集锦</a>
+                    <a href="#" class="tag" style="text-align: center; display: block; padding: 20px; background: white; border: 1px solid #e2e8f0;">主播实况</a>
+                    <a href="#" class="tag" style="text-align: center; display: block; padding: 20px; background: white; border: 1px solid #e2e8f0;">新手入门</a>
+                    <a href="#" class="tag" style="text-align: center; display: block; padding: 20px; background: white; border: 1px solid #e2e8f0;">比赛录像</a>
+                    <a href="#" class="tag" style="text-align: center; display: block; padding: 20px; background: white; border: 1px solid #e2e8f0;">枪法展示</a>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>关于我们</h4>
+                    <p style="font-size: 0.9rem; line-height: 1.6;">专注于 CS1.6 NAPoS 模式视频资源的分享与传播，致力于为老玩家和新人提供高质量的视觉体验和战术指导。</p>
+                </div>
+                <div class="footer-col">
+                    <h4>快速导航</h4>
+                    <ul>
+                        <li><a href="#">最新视频</a></li>
+                        <li><a href="#">热门排行</a></li>
+                        <li><a href="#">战术库</a></li>
+                        <li><a href="#">社区论坛</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>帮助中心</h4>
+                    <ul>
+                        <li><a href="#">如何观看</a></li>
+                        <li><a href="#">投稿指南</a></li>
+                        <li><a href="#">版权声明</a></li>
+                        <li><a href="#">联系站长</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 CS1.6 NAPoS 视频站. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
